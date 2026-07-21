@@ -1,0 +1,93 @@
+/* Formulários e Inputs */
+
+.newsletter-form,
+form {
+    display: flex;
+    gap: var(--spacing-md);
+    max-width: 480px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.newsletter-form input,
+input[type="email"],
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--bg-color);
+    color: var(--text-primary);
+    font-size: 1rem;
+    outline-offset: 2px;
+    outline: none;
+    transition: border-color 0.25s ease;
+}
+
+.newsletter-form input:focus,
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 5px var(--accent);
+}
+
+.newsletter-form button,
+form button {
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    background: var(--accent);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover,
+newsletter-form button:focus,
+form button:hover,
+form button:focus {
+    background: var(--accent-hover);
+    outline: none;
+}
+
+/* Estados de erro e válido - exemplos básicos */
+
+input:invalid {
+    border-color: #e53e3e; /* vermelho escuro */
+}
+
+input:valid {
+    border-color: var(--success);
+}
+
+/* Mensagens de feedback podem receber estilos específicos se existirem */
+
+.form-feedback {
+    font-size: 0.85rem;
+    color: var(--success);
+    text-align: center;
+    margin-top: var(--spacing-sm);
+}
+
+/* Estilização adicional */
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+select {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    border-radius: var(--radius);
+}
