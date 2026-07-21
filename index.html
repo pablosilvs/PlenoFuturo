@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlenoFuturo - Longevidade e Finanças</title>
+    <meta name="description" content="Saúde, finanças e carreira para uma longevidade ativa.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <!-- Schema.org Básico -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PlenoFuturo",
+      "url": "https://plenofuturo.com.br"
+    }
+    </script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="#" onclick="router('home')">Pleno<span>Futuro</span></a>
+            </div>
+            <nav class="main-nav">
+                <ul id="menu-categorias">
+                    <!-- Categorias renderizadas via JS -->
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="btn-theme">🌓 Tema</button>
+        </div>
+    </header>
+
+    <!-- AdSense Placeholder Topo -->
+    <div class="container adsense-placeholder">
+        <p>Espaço Publicitário (AdSense 728x90)</p>
+    </div>
+
+    <main id="app-root" class="container">
+        <!-- O conteúdo será injetado aqui via JavaScript (SPA) -->
+    </main>
+
+    <!-- AdSense Placeholder Rodapé -->
+    <div class="container adsense-placeholder">
+        <p>Espaço Publicitário (AdSense Responsivo)</p>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>PlenoFuturo</h3>
+                <p>Construindo a melhor fase da sua vida com conhecimento e estratégia.</p>
+            </div>
+            <div>
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="#" onclick="router('sobre')">Sobre Nós</a></li>
+                    <li><a href="#" onclick="router('contato')">Contato</a></li>
+                    <li><a href="#" onclick="router('privacidade')">Política de Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados.</p>
+            <a href="admin.html" class="admin-link">Painel Admin</a>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

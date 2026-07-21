@@ -1,0 +1,5 @@
+[
+  { "id": "financas", "nome": "Finanças", "slug": "financas", "descricao": "Planejamento e investimentos." },
+  { "id": "saude", "nome": "Saúde e Bem-estar", "slug": "saude", "descricao": "Longevidade e qualidade de vida." },
+  { "id": "carreira", "nome": "Carreira 40+", "slug": "carreira", "descricao": "Transição e novos negócios." }
+]
