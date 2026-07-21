@@ -8,13 +8,6 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pablosilvs.github.io/PlenoFuturo/">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pablosilvs.github.io/PlenoFuturo/">
-    <meta property="og:title" content="PlenoFuturo — Longevidade, Finanças e Carreira">
-    <meta property="og:description" content="Guia prático e científico para viver a melhor fase da vida com autonomia e segurança financeira.">
-    <meta property="og:locale" content="pt_BR">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +19,7 @@
 <body>
     <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
+    <!-- Header Principal -->
     <header class="main-header" role="banner">
         <div class="header-flex">
             <div class="logo">
@@ -44,6 +38,7 @@
         </div>
     </header>
 
+    <!-- Conteúdo Principal -->
     <main id="main-content" role="main">
         <section class="hero-section">
             <span class="hero-badge">Longevidade Ativa & Autonomia</span>
@@ -110,6 +105,21 @@
             </div>
         </section>
 
+        <!-- Seção de FAQ / Dúvidas -->
+        <section style="margin: 60px 0;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">Dúvidas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>As calculadoras financeiras armazenam meus dados?</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não. Todos os cálculos são processados diretamente no seu navegador de forma 100% anônima e segura. Nenhum dado financeiro pessoal é enviado para nossos servidores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="newsletter-box">
             <h3>Receba conteúdos exclusivos quinzenalmente</h3>
             <p>Junte-se a milhares de leitores que buscam planejar o futuro com inteligência e independência.</p>
@@ -120,19 +130,22 @@
         </section>
     </main>
 
+    <!-- Rodapé Limpo -->
     <footer class="main-footer" role="contentinfo">
-        <div class="container">
-            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados. Clareza, autonomia e rigor editorial.</p>
+        <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+            <div class="logo" style="margin-bottom: 8px;">
+                <a href="index.html" style="font-size: 1.1rem; text-decoration: none; color: var(--text-primary);">Pleno<span>Futuro</span></a>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 600px; text-align: center;">
+                O portal definitivo de longevidade ativa, finanças e transição de carreira para a maturidade com rigor editorial e independência.
+            </p>
+            <div style="margin-top: 16px; color: var(--text-secondary); font-size: 0.85rem;">
+                &copy; 2026 PlenoFuturo. Todos os direitos reservados.
+            </div>
         </div>
     </footer>
 
-    <div id="cookie-banner" role="region" aria-label="Aviso de Cookies">
-        <p>Utilizamos cookies essenciais e tecnologias semelhantes para melhorar a sua experiência no portal, em conformidade com a LGPD e nossas diretrizes de privacidade.</p>
-        <div class="cookie-buttons">
-            <button onclick="document.getElementById('cookie-banner').style.display='none'" class="btn-primary">Aceitar</button>
-        </div>
-    </div>
-
+    <!-- Script de Tema -->
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
         if (toggleBtn) {
