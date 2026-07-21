@@ -1,10 +1,15 @@
-/* Layout geral e containers */
+/* =======================
+   PlenoFuturo - Layout CSS
+   Containers, header, footer, grid
+   ======================= */
 
-.container, .container-policy, .header-flex {
+.container,
+.container-policy,
+.header-flex {
     width: 100%;
     max-width: 1140px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 var(--spacing-lg);
 }
 
 .main-header {
@@ -15,16 +20,66 @@
     top: 0;
     z-index: 100;
     border-bottom: 1px solid var(--border);
-    padding: 16px 0;
+    padding: var(--spacing-lg) 0;
+    box-shadow: 0 2px 6px var(--shadow-subtle);
 }
 
 .main-footer {
     background-color: var(--card-bg);
     color: var(--text-secondary);
-    padding: 40px 0;
+    padding: var(--spacing-xxl) 0;
     margin-top: auto;
     border-top: 1px solid var(--border);
     text-align: center;
-    font-size: 0.85rem;
+    font-size: var(--font-size-sm);
     flex-shrink: 0;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xxl);
+}
+
+/* Seção Hero */
+
+.hero-section {
+    text-align: center;
+    padding: var(--spacing-xxl) 0 var(--spacing-xl) 0;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(0, 102, 204, 0.1);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-section h1 {
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.03em;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.hero-section p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
 }
