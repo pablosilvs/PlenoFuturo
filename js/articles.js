@@ -1,4 +1,4 @@
-// articles.js - Gestão dos artigos, filtro e renderização
+// articles.js - Gestão dos artigos, filtros e renderização
 
 const Articles = (() => {
     // Base de dados de artigos (exemplo simplificado)
@@ -58,5 +58,30 @@ const Articles = (() => {
         renderArticleCards,
         filterArticles,
         filterByCategory
+    };
+})();
+
+// Renderer para homepage e outras páginas
+const Renderer = (() => {
+    // Exibe artigos em destaque na homepage
+    const renderFeaturedArticles = () => {
+        const container = document.getElementById('artigos-destaque');
+        if (!container) return;
+
+        // Exemplo: pega os 3 primeiros artigos
+        const featured = Articles.artigosDB.slice(0, 3);
+
+        container.innerHTML = Articles.renderArticleCards(featured);
+    };
+
+    // Inicializa renderizações da home
+    const initHome = () => {
+        renderFeaturedArticles();
+        // Outras renderizações podem ser adicionadas aqui
+    };
+
+    return {
+        renderFeaturedArticles,
+        initHome
     };
 })();
