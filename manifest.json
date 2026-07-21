@@ -1,19 +1,19 @@
 {
-  "name": "PlenoFuturo",
+  "name": "PlenoFuturo — Longevidade, Finanças e Carreira",
   "short_name": "PlenoFuturo",
-  "start_url": "/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#F8FAFC",
-  "theme_color": "#1E3A8A",
-  "description": "Saúde e finanças para um futuro pleno.",
+  "background_color": "#080b11",
+  "theme_color": "#0066cc",
+  "description": "Portal especializado em longevidade ativa, finanças e transição de carreira.",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
+      "src": "assets/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-512.png",
+      "src": "assets/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
