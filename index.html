@@ -1,93 +1,122 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlenoFuturo - Longevidade, Finanças e Carreira</title>
-    <meta name="description" content="Saúde, finanças e transição de carreira para uma longevidade ativa, independente e próspera após os 40 anos.">
-    <meta name="google-site-verification" content="GToHrRUaEuteOM6ISlBmo5hk2K4Las-SJWhgsz_SHk" />
+    <title>PlenoFuturo - Longevidade, Finanças e Carreira na Maturidade</title>
+    <meta name="description" content="Portal especializado em longevidade ativa, finanças, transição de carreira e saúde integrativa para adultos acima dos 40 anos.">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pablosilvs.github.io/PlenoFuturo/">
     
-    <!-- Open Graph / Social -->
+    <!-- Open Graph / Redes Sociais -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pablosilvs.github.io/PlenoFuturo/">
     <meta property="og:title" content="PlenoFuturo - Longevidade, Finanças e Carreira">
-    <meta property="og:description" content="Guia prático de finanças, saúde e carreira para a maturidade.">
+    <meta property="og:description" content="Guia prático e científico para viver a melhor fase da vida com autonomia e segurança financeira.">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Performance & Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
     
-    <!-- Stylesheets & Fonts -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
     <link rel="manifest" href="manifest.json">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
-    
-    <!-- Schema.org JSON-LD -->
+
+    <!-- Schema.org JSON-LD Unificado -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "PlenoFuturo",
-        "url": "https://pablosilvs.github.io/PlenoFuturo/"
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://pablosilvs.github.io/PlenoFuturo/#website",
+                "url": "https://pablosilvs.github.io/PlenoFuturo/",
+                "name": "PlenoFuturo",
+                "inLanguage": "pt-BR"
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://pablosilvs.github.io/PlenoFuturo/#organization",
+                "name": "PlenoFuturo",
+                "url": "https://pablosilvs.github.io/PlenoFuturo/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://pablosilvs.github.io/PlenoFuturo/assets/logo.png"
+                }
+            }
+        ]
     }
     </script>
 </head>
 <body>
-    <header class="main-header">
+    <a href="#app-root" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header class="main-header" role="banner">
         <div class="container header-flex">
             <div class="logo">
-                <a href="#home">Pleno<span>Futuro</span></a>
+                <a href="#home" aria-label="PlenoFuturo - Página Inicial">Pleno<span>Futuro</span></a>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav" role="navigation" aria-label="Menu Principal">
                 <ul>
                     <li><a href="#home">Início</a></li>
+                    <li><a href="#calculadoras">Ferramentas</a></li>
                     <li><a href="#quem-somos">Quem Somos</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
-            <button id="theme-toggle" class="btn-theme" aria-label="Alternar Tema">🌓 Tema</button>
+            <div class="header-actions">
+                <button id="theme-toggle" class="btn-icon" aria-label="Alternar modo escuro e claro">🌓</button>
+            </div>
         </div>
     </header>
 
-    <!-- AdSense Placeholder Topo -->
-    <div class="container" style="text-align:center; padding: 15px; background: rgba(255,255,255,0.02); margin: 15px auto; border-radius: 8px; color: var(--text-secondary); font-size: 0.85rem;">
-        <p>Espaço Publicitário (AdSense 728x90)</p>
+    <!-- Slot Publicitário Superior (AdSense Responsivo com Condicional LGPD) -->
+    <div id="adsense-top-container" class="container ads-container" style="display:none;">
+        <div class="ad-placeholder">Espaço Publicitário (Google AdSense)</div>
     </div>
 
-    <main id="app-root" class="container">
-        <!-- O conteúdo dinâmico do SPA será injetado aqui -->
+    <main id="app-root" class="container" role="main">
+        <!-- Injeção SPA Dinâmica -->
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" role="contentinfo">
         <div class="container footer-grid">
             <div class="footer-col">
                 <h3>PlenoFuturo</h3>
-                <p style="font-size: 0.9rem; color: #94a3b8;">Seu portal definitivo de longevidade ativa, finanças e transição de carreira para viver a melhor fase da vida com segurança.</p>
+                <p>O portal definitivo de longevidade ativa, finanças e transição de carreira para a maturidade com rigor editorial e independência.</p>
             </div>
             <div class="footer-col">
                 <h4>Navegação</h4>
                 <ul>
                     <li><a href="#home">Início</a></li>
+                    <li><a href="#calculadoras">Calculadoras</a></li>
                     <li><a href="#quem-somos">Quem Somos</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#faq">Perguntas Frequentes</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Institucional</h4>
-                <ul>
-                    <li><a href="#termos">Termos de Uso</a></li>
-                    <li><a href="#aviso-legal">Aviso Legal</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal & Privacidade</h4>
+                <h4>Políticas & Legal</h4>
                 <ul>
                     <li><a href="#privacidade">Política de Privacidade (LGPD)</a></li>
                     <li><a href="#cookies">Política de Cookies</a></li>
+                    <li><a href="#termos">Termos de Uso</a></li>
+                    <li><a href="#aviso-legal">Aviso Legal & Disclaimer</a></li>
+                    <li><a href="#editorial">Política Editorial</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="#contato">Fale Conosco</a></li>
+                    <li><a href="#transparencia">Transparência</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom container">
-            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados.</p>
+            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados. Conteúdo protegido por leis de propriedade intelectual.</p>
         </div>
     </footer>
 
