@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlenoFuturo Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1><span class="blue">Pleno</span>Futuro</h1>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li data-section="dashboard" class="active">Dashboard</li>
+          <li data-section="artigos">Artigos</li>
+          <li data-section="categorias">Categorias</li>
+          <li data-section="autores">Autores</li>
+          <li data-section="newsletter">Newsletter</li>
+          <li data-section="comentarios">Comentários</li>
+          <li data-section="seo">SEO</li>
+          <li data-section="ferramentas">Ferramentas</li>
+          <li data-section="midia">Mídia</li>
+          <li data-section="configuracoes">Configurações</li>
+          <li data-section="backup">Backup</li>
+          <li data-section="sair" class="logout">Sair</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+      <header class="header">
+        <div class="breadcrumbs">
+          <span id="breadcrumb-current">Dashboard</span>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/40" alt="Perfil do Admin" />
+          <span>Administrador</span>
+        </div>
+      </header>
+
+      <section id="page-content" class="page-content">
+        <!-- Conteúdo dinâmico carregado aqui -->
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
