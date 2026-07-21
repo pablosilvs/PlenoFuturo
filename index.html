@@ -3,56 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlenoFuturo - Longevidade, Finanças e Carreira na Maturidade</title>
+    <title>PlenoFuturo — Longevidade, Finanças e Carreira</title>
     <meta name="description" content="Portal especializado em longevidade ativa, finanças, transição de carreira e saúde integrativa para adultos acima dos 40 anos.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pablosilvs.github.io/PlenoFuturo/">
     
-    <!-- Open Graph / Redes Sociais -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pablosilvs.github.io/PlenoFuturo/">
-    <meta property="og:title" content="PlenoFuturo - Longevidade, Finanças e Carreira">
+    <meta property="og:title" content="PlenoFuturo — Longevidade, Finanças e Carreira">
     <meta property="og:description" content="Guia prático e científico para viver a melhor fase da vida com autonomia e segurança financeira.">
     <meta property="og:locale" content="pt_BR">
 
-    <!-- Performance & Preconnect -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="manifest" href="manifest.json">
-
-    <!-- Schema.org JSON-LD Unificado -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebSite",
-                "@id": "https://pablosilvs.github.io/PlenoFuturo/#website",
-                "url": "https://pablosilvs.github.io/PlenoFuturo/",
-                "name": "PlenoFuturo",
-                "inLanguage": "pt-BR"
-            },
-            {
-                "@type": "Organization",
-                "@id": "https://pablosilvs.github.io/PlenoFuturo/#organization",
-                "name": "PlenoFuturo",
-                "url": "https://pablosilvs.github.io/PlenoFuturo/",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://pablosilvs.github.io/PlenoFuturo/assets/logo.png"
-                }
-            }
-        ]
-    }
-    </script>
 </head>
 <body>
     <a href="#app-root" class="skip-link">Pular para o conteúdo principal</a>
 
+    <!-- Header Minimalista e Sticky -->
     <header class="main-header" role="banner">
         <div class="container header-flex">
             <div class="logo">
@@ -68,37 +43,42 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <button id="theme-toggle" class="btn-icon" aria-label="Alternar modo escuro e claro">🌓</button>
+                <button id="theme-toggle" class="btn-icon" aria-label="Alternar modo escuro e claro">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Slot Publicitário Superior (AdSense Responsivo com Condicional LGPD) -->
+    <!-- Slot Publicitário Superior (LGPD Condicional) -->
     <div id="adsense-top-container" class="container ads-container" style="display:none;">
-        <div class="ad-placeholder">Espaço Publicitário (Google AdSense)</div>
+        <span class="ad-label">Publicidade</span>
     </div>
 
     <main id="app-root" class="container" role="main">
         <!-- Injeção SPA Dinâmica -->
     </main>
 
+    <!-- Rodapé Corporativo e Completo -->
     <footer class="main-footer" role="contentinfo">
         <div class="container footer-grid">
             <div class="footer-col">
-                <h3>PlenoFuturo</h3>
+                <div class="logo" style="margin-bottom: 15px;">
+                    <a href="#home">Pleno<span>Futuro</span></a>
+                </div>
                 <p>O portal definitivo de longevidade ativa, finanças e transição de carreira para a maturidade com rigor editorial e independência.</p>
             </div>
             <div class="footer-col">
                 <h4>Navegação</h4>
                 <ul>
                     <li><a href="#home">Início</a></li>
-                    <li><a href="#calculadoras">Calculadoras</a></li>
+                    <li><a href="#calculadoras">Ferramentas</a></li>
                     <li><a href="#quem-somos">Quem Somos</a></li>
                     <li><a href="#faq">Perguntas Frequentes</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Políticas & Legal</h4>
+                <h4>Legal & Políticas</h4>
                 <ul>
                     <li><a href="#privacidade">Política de Privacidade (LGPD)</a></li>
                     <li><a href="#cookies">Política de Cookies</a></li>
@@ -108,7 +88,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contato</h4>
+                <h4>Contato & Transparência</h4>
                 <ul>
                     <li><a href="#contato">Fale Conosco</a></li>
                     <li><a href="#transparencia">Transparência</a></li>
@@ -116,7 +96,7 @@
             </div>
         </div>
         <div class="footer-bottom container">
-            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados. Conteúdo protegido por leis de propriedade intelectual.</p>
+            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados. Desenvolvido com foco em excelência e acessibilidade.</p>
         </div>
     </footer>
 
