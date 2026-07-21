@@ -1,217 +1,217 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="dark">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PlenoFuturo — Longevidade, Finanças e Carreira</title>
-    <meta name="description" content="Portal especializado em longevidade ativa, finanças, transição de carreira e saúde integrativa para adultos acima dos 40 anos." />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://pablosilvs.github.io/PlenoFuturo/" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlenoFuturo — Longevidade, Finanças e Carreira</title>
+  <meta name="description" content="Portal especializado em longevidade ativa, finanças, transição de carreira e saúde integrativa para adultos acima dos 40 anos." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pablosilvs.github.io/PlenoFuturo/" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-    <!-- CSS Modularizado -->
-    <link rel="stylesheet" href="css/tokens.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/components/buttons.css" />
-    <!-- Adicione outros arquivos CSS conforme criados -->
+  <!-- CSS Modularizado -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components/buttons.css" />
+  <link rel="stylesheet" href="css/components/cards.css" />
+  <link rel="stylesheet" href="css/components/forms.css" />
+
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-    <!-- Header Principal -->
-    <header class="main-header" role="banner">
-        <div class="header-flex container">
-            <div class="logo">
-                <a href="index.html" aria-label="PlenoFuturo - Página Inicial"
-                    >Pleno<span>Futuro</span></a
-                >
-            </div>
-            <nav class="main-nav" role="navigation" aria-label="Menu Principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="admin.html">Ferramentas</a></li>
-                    <li><a href="termos.html">Termos</a></li>
-                </ul>
-            </nav>
-            <button
-                id="theme-toggle"
-                class="btn-icon"
-                aria-label="Alternar modo escuro e claro"
-            >
-                <svg
-                    width="18"
-                    height="18"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                >
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                </svg>
-            </button>
-        </div>
-    </header>
-
-    <!-- Conteúdo Principal -->
-    <main id="main-content" role="main" class="container">
-        <section class="hero-section">
-            <span class="hero-badge">Longevidade Ativa & Autonomia</span>
-            <h1>Viva a melhor fase da vida com clareza</h1>
-            <p>
-                Conteúdos práticos, seguros e baseados em evidências sobre finanças,
-                saúde integrativa e transição de carreira para a maturidade.
-            </p>
-            <div class="hero-cta">
-                <a href="#artigos" class="btn-primary">Explorar Artigos</a>
-                <a href="termos.html" class="btn-secondary">Conheça os Termos</a>
-            </div>
-        </section>
-
-        <div class="search-wrapper" style="max-width:600px; margin: 0 auto 30px auto;">
-            <div class="search-box" style="position: relative; display: flex; align-items: center;">
-                <svg
-                    class="search-icon"
-                    width="20"
-                    height="20"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    style="position: absolute; left: 16px; color: var(--text-secondary);"
-                >
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                <input
-                    type="text"
-                    placeholder="O que você deseja aprender hoje?"
-                    aria-label="Pesquisar artigos"
-                    style="width: 100%; padding: 14px 16px 14px 48px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card-bg); color: var(--text-primary); font-size: 0.95rem; outline: none;"
-                />
-            </div>
-        </div>
-
-        <div
-            class="categories-bar"
-            role="region"
-            aria-label="Categorias"
-            style="display: flex; gap: 12px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap;"
+  <!-- Cabeçalho com menu fixo -->
+  <header class="main-header" role="banner">
+    <div class="header-flex container">
+      <div class="logo">
+        <a href="index.html" aria-label="PlenoFuturo - Página Inicial"
+          >Pleno<span>Futuro</span></a
         >
-            <button class="cat-pill active" style="background: var(--card-bg); border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer;">
-                Todos
-            </button>
-            <button class="cat-pill" style="background: var(--card-bg); border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer;">
-                Finanças
-            </button>
-            <button class="cat-pill" style="background: var(--card-bg); border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer;">
-                Carreira
-            </button>
-            <button class="cat-pill" style="background: var(--card-bg); border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer;">
-                Saúde & Longevidade
-            </button>
-        </div>
+      </div>
 
-        <section id="artigos">
-            <h2 class="section-title" style="font-size: 1.5rem; font-weight: 600; margin-bottom: 24px; letter-spacing: -0.02em;">
-                Artigos em Destaque
-            </h2>
-            <div
-                class="articles-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 50px;"
+      <!-- Menu principal ampliado -->
+      <nav class="main-nav" role="navigation" aria-label="Menu Principal">
+        <ul>
+          <li><a href="index.html" class="active">Início</a></li>
+          <li>
+            <a href="#financas" aria-haspopup="true" aria-expanded="false"
+              >Finanças</a
             >
-                <!-- Artigos aqui -->
-                <article class="card" style="background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-subtle);">
-                    <div>
-                        <span class="card-category" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--accent); letter-spacing: 0.05em; margin-bottom: 10px; display: block;">
-                            Finanças
-                        </span>
-                        <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; line-height: 1.4;">
-                            Regra dos 50-30-20: Como Organizar o Orçamento Familiar na Maturidade
-                        </h3>
-                        <p style="color: var(--text-secondary); font-size: 0.925rem; margin-bottom: 20px;">
-                            Aprenda a aplicar a regra orçamentária para equilibrar gastos essenciais, estilo de vida e investimentos focados na aposentadoria.
-                        </p>
-                    </div>
-                    <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 16px; font-size: 0.825rem; color: var(--text-secondary);">
-                        <span>6 min de leitura</span>
-                        <a href="#" class="read-link" style="color: var(--accent); text-decoration: none; font-weight: 600;">Ler artigo &rarr;</a>
-                    </div>
-                </article>
+          </li>
+          <li>
+            <a href="#saude" aria-haspopup="true" aria-expanded="false"
+              >Saúde</a
+            >
+          </li>
+          <li>
+            <a href="#carreira" aria-haspopup="true" aria-expanded="false"
+              >Carreira</a
+            >
+          </li>
+          <li><a href="admin.html">Ferramentas</a></li>
+          <li><a href="termos.html">Termos</a></li>
+        </ul>
+      </nav>
 
-                <!-- Repetir artigos conforme necessidade -->
-            </div>
-        </section>
+      <!-- Barra de busca -->
+      <div class="search-wrapper">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Pesquisar artigos..."
+          aria-label="Pesquisar artigos"
+        />
+      </div>
 
-        <!-- FAQ -->
-        <section style="margin: 60px 0;">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">Dúvidas Frequentes</h2>
-            <div class="faq-container" style="max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
-                <div class="faq-item" style="background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; cursor: pointer; box-shadow: var(--shadow-subtle);">
-                    <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center;">
-                        <h4 style="font-size: 1rem; font-weight: 600;">
-                            As calculadoras financeiras armazenam meus dados?
-                        </h4>
-                    </div>
-                    <div class="faq-answer" style="margin-top: 14px; color: var(--text-secondary); font-size: 0.925rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 14px; display: none;">
-                        <p>
-                            Não. Todos os cálculos são processados diretamente no seu navegador de forma 100% anônima e segura. Nenhum dado financeiro pessoal é enviado para nossos servidores.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <button
+        id="theme-toggle"
+        class="btn-icon"
+        aria-label="Alternar modo escuro e claro"
+        title="Alternar tema"
+      >
+        <svg
+          width="18"
+          height="18"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
 
-        <!-- Newsletter -->
-        <section class="newsletter-box" style="background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; text-align: center; margin: 60px 0; box-shadow: var(--shadow-subtle);">
-            <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 12px;">Receba conteúdos exclusivos quinzenalmente</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem;">
-                Junte-se a milhares de leitores que buscam planejar o futuro com inteligência e independência.
-            </p>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Inscrição realizada com sucesso!');" style="display: flex; gap: 12px; max-width: 480px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
-                <input type="email" placeholder="Seu melhor e-mail" required aria-label="Seu melhor e-mail" style="flex: 1; min-width: 250px; padding: 12px 16px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--bg-color); color: var(--text-primary); outline: none;" />
-                <button type="submit" class="btn-primary">Inscrever-se</button>
-            </form>
-        </section>
-    </main>
+  <!-- Breadcrumb para páginas internas (exemplo estático para home) -->
+  <nav aria-label="Breadcrumb" class="breadcrumb container" style="display:none">
+    <ol>
+      <li><a href="index.html">Início</a></li>
+    </ol>
+  </nav>
 
-    <!-- Rodapé -->
-    <footer class="main-footer" role="contentinfo">
-        <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-            <div class="logo" style="margin-bottom: 8px;">
-                <a href="index.html" style="font-size: 1.1rem; text-decoration: none; color: var(--text-primary);">Pleno<span>Futuro</span></a>
-            </div>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 600px; text-align: center;">
-                O portal definitivo de longevidade ativa, finanças e transição de carreira para a maturidade com rigor editorial e independência.
-            </p>
-            <div style="margin-top: 16px; color: var(--text-secondary); font-size: 0.85rem;">
-                &copy; 2026 PlenoFuturo. Todos os direitos reservados.
-            </div>
-        </div>
-    </footer>
+  <!-- Conteúdo principal -->
+  <main id="main-content" role="main" class="container">
+    <!-- Hero Premium -->
+    <section class="hero-section">
+      <span class="hero-badge">Longevidade Ativa & Autonomia</span>
+      <h1>Viva a melhor fase da vida com clareza</h1>
+      <p>
+        Conteúdos práticos, seguros e baseados em evidências sobre finanças,
+        saúde integrativa e transição de carreira para a maturidade.
+      </p>
+      <div class="hero-cta">
+        <a href="#artigos-destaque" class="btn-primary">Explorar Artigos</a>
+        <a href="termos.html" class="btn-secondary">Conheça os Termos</a>
+      </div>
+    </section>
 
-    <!-- Script de Tema -->
-    <script>
-        const toggleBtn = document.getElementById('theme-toggle');
-        if (toggleBtn) {
-            toggleBtn.addEventListener('click', () => {
-                const current = document.documentElement.getAttribute('data-theme');
-                const target = current === 'dark' ? 'light' : 'dark';
-                document.documentElement.setAttribute('data-theme', target);
-                localStorage.setItem('theme', target);
-            });
-        }
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        }
-    </script>
+    <!-- Estatísticas do Portal -->
+    <section class="statistics" aria-label="Estatísticas do portal" style="text-align:center; margin: 40px 0;">
+      <div><strong>+150</strong> artigos</div>
+      <div><strong>+20 mil</strong> leitores</div>
+      <div><strong>Atualizado</strong> semanalmente</div>
+    </section>
+
+    <!-- Categorias com ícones -->
+    <section class="categories container" aria-label="Categorias principais" style="display:flex; justify-content:center; gap:40px; margin-bottom:40px;">
+      <a href="#financas" class="category-pill" aria-label="Categoria Finanças">
+        💰<span>Finanças</span>
+      </a>
+      <a href="#saude" class="category-pill" aria-label="Categoria Saúde e Longevidade">
+        🩺<span>Saúde & Longevidade</span>
+      </a>
+      <a href="#carreira" class="category-pill" aria-label="Categoria Carreira 40+">
+        🚀<span>Carreira</span>
+      </a>
+    </section>
+
+    <!-- Artigos em Destaque -->
+    <section id="artigos-destaque" aria-label="Artigos em Destaque" class="articles-grid">
+      <!-- Os artigos serão carregados dinamicamente pelo JS -->
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-box" aria-label="Inscrição para newsletter" style="margin: 60px 0; text-align:center;">
+      <h3>Receba conteúdos exclusivos quinzenalmente</h3>
+      <p>
+        Sem spam. Apenas conteúdos práticos sobre finanças e longevidade enviados quinzenalmente.
+      </p>
+      <form id="newsletter-form" class="newsletter-form" aria-live="polite" novalidate>
+        <input
+          type="email"
+          id="newsEmail"
+          name="email"
+          placeholder="Seu melhor e-mail"
+          required
+          aria-required="true"
+          aria-describedby="newsFeedback"
+        />
+        <button type="submit" class="btn-primary">Inscrever-se</button>
+      </form>
+      <p id="newsFeedback" class="form-feedback" role="alert" aria-live="assertive" style="display:none;"></p>
+    </section>
+  </main>
+
+  <!-- Rodapé Completo -->
+  <footer class="main-footer" role="contentinfo">
+    <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px;">
+      <div>
+        <a href="index.html" class="logo" aria-label="Página inicial PlenoFuturo">Pleno<span>Futuro</span></a>
+        <p style="max-width:300px; margin-top:16px;">
+          O portal definitivo de longevidade ativa, finanças e transição de carreira para a maturidade com rigor editorial e independência.
+        </p>
+      </div>
+      <nav aria-label="Links rápidos">
+        <ul style="list-style:none; padding:0;">
+          <li><a href="#financas">Finanças</a></li>
+          <li><a href="#saude">Saúde & Longevidade</a></li>
+          <li><a href="#carreira">Carreira</a></li>
+          <li><a href="termos.html">Termos</a></li>
+          <li><a href="privacidade.html">Política de Privacidade</a></li>
+        </ul>
+      </nav>
+      <section aria-label="Newsletter no rodapé">
+        <h4>Newsletter</h4>
+        <form id="newsletter-form-footer" class="newsletter-form" aria-live="polite" novalidate>
+          <input
+            type="email"
+            id="newsEmailFooter"
+            name="email"
+            placeholder="Seu melhor e-mail"
+            required
+            aria-required="true"
+            aria-describedby="newsFeedbackFooter"
+          />
+          <button type="submit" class="btn-primary">Inscrever-se</button>
+        </form>
+        <p id="newsFeedbackFooter" class="form-feedback" role="alert" aria-live="assertive" style="display:none;"></p>
+      </section>
+    </div>
+    <div style="text-align:center; margin-top:24px; font-size:0.85rem; color: var(--text-secondary);">
+      &copy; 2026 PlenoFuturo. Todos os direitos reservados. Última atualização: 21/07/2026
+      <button id="backToTop" aria-label="Voltar ao topo" style="margin-left:10px;">⬆️</button>
+    </div>
+  </footer>
+
+  <!-- Script central do projeto -->
+  <script src="js/app.js" defer></script>
+
+  <script>
+    // Voltar ao topo
+    document.getElementById('backToTop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
