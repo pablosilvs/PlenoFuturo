@@ -7,7 +7,7 @@
     <meta name="description" content="Portal especializado em longevidade ativa, finanças, transição de carreira e saúde integrativa para adultos acima dos 40 anos.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pablosilvs.github.io/PlenoFuturo/">
-    
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pablosilvs.github.io/PlenoFuturo/">
@@ -15,91 +15,138 @@
     <meta property="og:description" content="Guia prático e científico para viver a melhor fase da vida com autonomia e segurança financeira.">
     <meta property="og:locale" content="pt_BR">
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <a href="#app-root" class="skip-link">Pular para o conteúdo principal</a>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-    <!-- Header Minimalista e Sticky -->
     <header class="main-header" role="banner">
-        <div class="container header-flex">
+        <div class="header-flex">
             <div class="logo">
-                <a href="#home" aria-label="PlenoFuturo - Página Inicial">Pleno<span>Futuro</span></a>
+                <a href="index.html" aria-label="PlenoFuturo - Página Inicial">Pleno<span>Futuro</span></a>
             </div>
             <nav class="main-nav" role="navigation" aria-label="Menu Principal">
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#calculadoras">Ferramentas</a></li>
-                    <li><a href="#quem-somos">Quem Somos</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="admin.html">Ferramentas</a></li>
+                    <li><a href="termos.html">Termos</a></li>
                 </ul>
             </nav>
-            <div class="header-actions">
-                <button id="theme-toggle" class="btn-icon" aria-label="Alternar modo escuro e claro">
-                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
-                </button>
-            </div>
+            <button id="theme-toggle" class="btn-icon" aria-label="Alternar modo escuro e claro">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+            </button>
         </div>
     </header>
 
-    <!-- Slot Publicitário Superior (LGPD Condicional) -->
-    <div id="adsense-top-container" class="container ads-container" style="display:none;">
-        <span class="ad-label">Publicidade</span>
-    </div>
+    <main id="main-content" role="main">
+        <section class="hero-section">
+            <span class="hero-badge">Longevidade Ativa & Autonomia</span>
+            <h1>Viva a melhor fase da vida com clareza</h1>
+            <p>Conteúdos práticos, seguros e baseados em evidências sobre finanças, saúde integrativa e transição de carreira para a maturidade.</p>
+            <div class="hero-cta">
+                <a href="#artigos" class="btn-primary">Explorar Artigos</a>
+                <a href="termos.html" class="btn-secondary">Conheça os Termos</a>
+            </div>
+        </section>
 
-    <main id="app-root" class="container" role="main">
-        <!-- Injeção SPA Dinâmica -->
-    </main>
-
-    <!-- Rodapé Corporativo e Completo -->
-    <footer class="main-footer" role="contentinfo">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <div class="logo" style="margin-bottom: 15px;">
-                    <a href="#home">Pleno<span>Futuro</span></a>
-                </div>
-                <p>O portal definitivo de longevidade ativa, finanças e transição de carreira para a maturidade com rigor editorial e independência.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#calculadoras">Ferramentas</a></li>
-                    <li><a href="#quem-somos">Quem Somos</a></li>
-                    <li><a href="#faq">Perguntas Frequentes</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal & Políticas</h4>
-                <ul>
-                    <li><a href="#privacidade">Política de Privacidade (LGPD)</a></li>
-                    <li><a href="#cookies">Política de Cookies</a></li>
-                    <li><a href="#termos">Termos de Uso</a></li>
-                    <li><a href="#aviso-legal">Aviso Legal & Disclaimer</a></li>
-                    <li><a href="#editorial">Política Editorial</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contato & Transparência</h4>
-                <ul>
-                    <li><a href="#contato">Fale Conosco</a></li>
-                    <li><a href="#transparencia">Transparência</a></li>
-                </ul>
+        <div class="search-wrapper">
+            <div class="search-box">
+                <svg class="search-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" placeholder="O que você deseja aprender hoje?" aria-label="Pesquisar artigos">
             </div>
         </div>
-        <div class="footer-bottom container">
-            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados. Desenvolvido com foco em excelência e acessibilidade.</p>
+
+        <div class="categories-bar" role="region" aria-label="Categorias">
+            <button class="cat-pill active">Todos</button>
+            <button class="cat-pill">Finanças</button>
+            <button class="cat-pill">Carreira</button>
+            <button class="cat-pill">Saúde & Longevidade</button>
+        </div>
+
+        <section id="artigos">
+            <h2 class="section-title">Artigos em Destaque</h2>
+            <div class="articles-grid">
+                <article class="card">
+                    <div>
+                        <span class="card-category">Finanças</span>
+                        <h3>Regra dos 50-30-20: Como Organizar o Orçamento Familiar na Maturidade</h3>
+                        <p>Aprenda a aplicar a regra orçamentária para equilibrar gastos essenciais, estilo de vida e investimentos focados na aposentadoria.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span>6 min de leitura</span>
+                        <a href="#" class="read-link">Ler artigo &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <span class="card-category">Carreira</span>
+                        <h3>Como Fazer uma Transição de Carreira aos 45 Anos com Segurança</h3>
+                        <p>Estratégias práticas para transformar sua bagagem profissional em um novo modelo de atuação consultiva ou empreendedora.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span>8 min de leitura</span>
+                        <a href="#" class="read-link">Ler artigo &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <span class="card-category">Saúde</span>
+                        <h3>Longevidade Ativa: O Papel da Massa Muscular após os 50 Anos</h3>
+                        <p>Entenda por que o treinamento de força é o pilar fundamental para manter a independência física e prevenir quedas na maturidade.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span>5 min de leitura</span>
+                        <a href="#" class="read-link">Ler artigo &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="newsletter-box">
+            <h3>Receba conteúdos exclusivos quinzenalmente</h3>
+            <p>Junte-se a milhares de leitores que buscam planejar o futuro com inteligência e independência.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Inscrição realizada com sucesso!');">
+                <input type="email" placeholder="Seu melhor e-mail" required aria-label="Seu melhor e-mail">
+                <button type="submit" class="btn-primary">Inscrever-se</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados. Clareza, autonomia e rigor editorial.</p>
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <div id="cookie-banner" role="region" aria-label="Aviso de Cookies">
+        <p>Utilizamos cookies essenciais e tecnologias semelhantes para melhorar a sua experiência no portal, em conformidade com a LGPD e nossas diretrizes de privacidade.</p>
+        <div class="cookie-buttons">
+            <button onclick="document.getElementById('cookie-banner').style.display='none'" class="btn-primary">Aceitar</button>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const target = current === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', target);
+                localStorage.setItem('theme', target);
+            });
+        }
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+    </script>
 </body>
 </html>
