@@ -1,4 +1,6 @@
-/* Botões principais e secundários */
+/* ======================
+   PlenoFuturo - Botões
+   ====================== */
 
 .btn-primary {
     background: var(--accent);
@@ -7,18 +9,21 @@
     padding: 12px 24px;
     border-radius: var(--radius);
     cursor: pointer;
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 8px rgba(0, 102, 204, 0.25);
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
+
 .btn-primary:hover,
 .btn-primary:focus {
     background: var(--accent-hover);
     outline: none;
+    box-shadow: 0 0 10px var(--accent-hover);
 }
 
 .btn-secondary {
@@ -28,20 +33,21 @@
     padding: 12px 24px;
     border-radius: var(--radius);
     cursor: pointer;
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: border-color 0.3s ease;
 }
+
 .btn-secondary:hover,
 .btn-secondary:focus {
     border-color: var(--text-secondary);
     outline: none;
 }
 
-/* Botões ícones circulares */
 .btn-icon {
     background: transparent;
     border: 1px solid var(--border);
@@ -53,7 +59,9 @@
     justify-content: center;
     cursor: pointer;
     color: var(--text-primary);
+    transition: border-color 0.3s ease;
 }
+
 .btn-icon:hover,
 .btn-icon:focus {
     border-color: var(--text-secondary);
