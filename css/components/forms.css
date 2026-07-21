@@ -1,4 +1,6 @@
-/* Formulários e Inputs */
+/* ======================
+   PlenoFuturo - Formulários
+   ====================== */
 
 .newsletter-form,
 form {
@@ -23,7 +25,7 @@ select {
     border: 1px solid var(--border);
     background: var(--bg-color);
     color: var(--text-primary);
-    font-size: 1rem;
+    font-size: var(--font-size-md);
     outline-offset: 2px;
     outline: none;
     transition: border-color 0.25s ease;
@@ -45,35 +47,35 @@ form button {
     border-radius: var(--radius);
     cursor: pointer;
     border: none;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-md);
     background: var(--accent);
     color: white;
     transition: background-color 0.3s ease;
 }
 
 .newsletter-form button:hover,
-newsletter-form button:focus,
+.newsletter-form button:focus,
 form button:hover,
 form button:focus {
     background: var(--accent-hover);
     outline: none;
 }
 
-/* Estados de erro e válido - exemplos básicos */
+/* Estados de erro e válido */
 
 input:invalid {
-    border-color: #e53e3e; /* vermelho escuro */
+    border-color: var(--error);
 }
 
 input:valid {
     border-color: var(--success);
 }
 
-/* Mensagens de feedback podem receber estilos específicos se existirem */
+/* Mensagens de feedback */
 
 .form-feedback {
-    font-size: 0.85rem;
+    font-size: var(--font-size-sm);
     color: var(--success);
     text-align: center;
     margin-top: var(--spacing-sm);
