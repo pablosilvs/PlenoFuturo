@@ -1,4 +1,6 @@
-/* Cards para artigos, FAQ, autor box, etc */
+/* ======================
+   PlenoFuturo - Cards e FAQ
+   ====================== */
 
 .card {
     background: var(--card-bg);
@@ -12,26 +14,26 @@
 }
 
 .card-category {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
     color: var(--accent);
     letter-spacing: 0.05em;
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-xs);
     display: block;
 }
 
 .card h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-xs);
     line-height: 1.4;
 }
 
 .card p {
     color: var(--text-secondary);
-    font-size: 0.925rem;
-    margin-bottom: 20px;
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
 }
 
 .card-footer {
@@ -39,15 +41,15 @@
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid var(--border);
-    padding-top: 16px;
-    font-size: 0.825rem;
+    padding-top: var(--spacing-md);
+    font-size: var(--font-size-xs);
     color: var(--text-secondary);
 }
 
 .read-link {
     color: var(--accent);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
 }
 .read-link:hover,
 .read-link:focus {
@@ -55,14 +57,14 @@
     outline: none;
 }
 
-/* Container para FAQ */
+/* FAQ */
 
 .faq-container {
     max-width: 700px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--spacing-md);
 }
 
 .faq-item {
@@ -81,30 +83,30 @@
 }
 
 .faq-question h4 {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
 }
 
 .faq-answer {
-    margin-top: 14px;
+    margin-top: var(--spacing-sm);
     color: var(--text-secondary);
-    font-size: 0.925rem;
+    font-size: var(--font-size-sm);
     line-height: 1.6;
     border-top: 1px solid var(--border);
-    padding-top: 14px;
-    display: none;
+    padding-top: var(--spacing-sm);
+    display: none; /* Exibir controlado via JS */
 }
 
 /* Caixa autor */
 
 .author-box {
     display: flex;
-    gap: 16px;
+    gap: var(--spacing-md);
     background: var(--bg-color);
     border: 1px solid var(--border);
-    padding: 20px;
+    padding: var(--spacing-lg);
     border-radius: var(--radius);
-    margin-top: 40px;
+    margin-top: var(--spacing-xl);
     align-items: center;
 }
 
@@ -117,7 +119,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     font-size: 1.2rem;
     flex-shrink: 0;
 }
