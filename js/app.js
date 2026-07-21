@@ -1,4 +1,4 @@
-// app.js - Ponto único de inicialização do PlenoFuturo
+// app.js - Ponto único de inicialização do PlenoFuturo com integração de módulos e renderização
 
 // Inicializa o tema (claro/escuro)
 Theme.init();
@@ -15,7 +15,12 @@ FAQ.init();
 // Inicializa o formulário newsletter com validação e feedback
 Newsletter.init();
 
-// (Opcional) Inicializar gerenciador de anúncios quando disponível
-if (typeof AdsManager !== 'undefined') {
+// Renderiza a homepage com artigos destacados
+document.addEventListener('DOMContentLoaded', () => {
+  Renderer.initHome();
+
+  // Inicializa os anúncios se o AdsManager existir
+  if (typeof AdsManager !== 'undefined') {
     AdsManager.checkAndDisplayAds();
-}
+  }
+});
