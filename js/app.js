@@ -1,4 +1,4 @@
-// Base de Dados de Artigos Completos e Profissionais
+// Base de Dados de Artigos
 const artigosDB = [
     {
         id: 'regra-50-30-20',
@@ -55,13 +55,13 @@ const artigosDB = [
     }
 ];
 
-// Roteador SPA Inteligente
+// Roteador SPA Corrigido e Isolado
 function router() {
     const hash = window.location.hash.slice(1) || 'home';
     const root = document.getElementById('app-root');
     window.scrollTo(0, 0);
 
-    if (hash === 'home') {
+    if (hash === 'home' || hash === '') {
         renderHome(root);
     } else if (hash.startsWith('artigo/')) {
         const id = hash.split('/')[1];
@@ -142,82 +142,79 @@ function renderArticle(root, id) {
 }
 
 function renderInstitutional(root, page) {
-    const pages = {
-        'quem-somos': {
-            titulo: 'Quem Somos',
-            conteudo: `
-                <p>O <strong>PlenoFuturo</strong> nasceu com um propósito claro: democratizar o conhecimento prático sobre longevidade ativa, planejamento financeiro de longo prazo e reinvenção profissional na maturidade.</p>
-                <p>Acreditamos que a faixa dos 40, 50 anos e além não representa o fim de um ciclo, mas sim o início de uma fase marcada pela sabedoria, autonomia e novas conquistas. Nossa missão é fornecer conteúdos rigorosos, diretos ao ponto e livres de jargões complexos.</p>
-            `
-        },
-        'privacidade': {
-            titulo: 'Política de Privacidade (LGPD)',
-            conteudo: `
-                <p>A sua privacidade é de extrema importância para nós. O PlenoFuturo segue rigorosamente as diretrizes da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).</p>
-                <h3>Coleta de Dados</h3>
-                <p>Utilizamos cookies estritamente necessários para navegação e cookies analíticos/publicitários de terceiros (como o Google AdSense) mediante o seu consentimento explícito.</p>
-                <h3>Seus Direitos</h3>
-                <p>Você pode a qualquer momento solicitar a exclusão de dados de navegação ou ajustar suas preferências através do nosso banner de cookies.</p>
-            `
-        },
-        'cookies': {
-            titulo: 'Política de Cookies',
-            conteudo: `
-                <p>Utilizamos cookies para melhorar a sua experiência de navegação, personalizar conteúdos e analisar o tráfego do portal.</p>
-                <h3>Como Gerenciar</h3>
-                <p>Você tem total liberdade para aceitar, recusar ou personalizar o uso de cookies através do painel de preferências exibido no rodapé do site.</p>
-            `
-        },
-        'termos': {
-            titulo: 'Termos de Uso',
-            conteudo: `
-                <p>Ao acessar o portal <strong>PlenoFuturo</strong>, você concorda expressamente com os termos descritos nesta página.</p>
-                <h3>Propriedade Intelectual</h3>
-                <p>Todo o conteúdo publicado neste portal (textos, gráficos, logotipos) é protegido por direitos autorais, sendo vedada a reprodução comercial sem autorização prévia.</p>
-            `
-        },
-        'aviso-legal': {
-            titulo: 'Aviso Legal',
-            conteudo: `
-                <p>As informações fornecidas no portal <strong>PlenoFuturo</strong> possuem caráter estritamente educacional e informativo.</p>
-                <p>Conteúdos sobre finanças e saúde não substituem a consultoria individualizada com profissionais certificados (médicos, planejadores financeiros ou advogados).</p>
-            `
-        },
-        'faq': {
-            titulo: 'FAQ - Perguntas Frequentes',
-            conteudo: `
-                <h3>1. Os conteúdos do PlenoFuturo são gratuitos?</h3><p>Sim, 100% gratuitos e acessíveis a qualquer momento.</p>
-                <h3>2. Como posso sugerir novos temas?</h3><p>Através da nossa página de contato ou redes sociais oficiais.</p>
-                <h3>3. O site possui anúncios?</h3><p>Sim, exibimos anúncios contextuais para manter a gratuidade da plataforma.</p>
-                <h3>4. Como alterar minhas preferências de cookies?</h3><p>Basta limpar os dados de navegação ou redefinir as preferências no banner.</p>
-                <h3>5. Preciso me cadastrar para ler os artigos?</h3><p>Não é obrigatório o cadastro para leitura.</p>
-                <h3>6. Posso compartilhar os textos?</h3><p>Sim, desde que citada a fonte original.</p>
-                <h3>7. Os artigos são revisados por especialistas?</h3><p>Sim, seguimos critérios rígidos de curadoria de conteúdo.</p>
-                <h3>8. Como funciona a monetização?</h3><p>Por meio de anúncios de parceiros confiáveis como o Google AdSense.</p>
-                <h3>9. O site é compatível com celulares?</h3><p>Sim, o design é totalmente responsivo para smartphones e tablets.</p>
-                <h3>10. Posso investir com base nos artigos de finanças?</h3><p>Os textos são educacionais; recomenda-se análise de perfil de risco.</p>
-                <h3>11. Como entrar em contato com a redação?</h3><p>Utilize o formulário disponível na aba Contato.</p>
-                <h3>12. Com que frequência há novos artigos?</h3><p>Publicamos conteúdos novos semanalmente.</p>
-                <h3>13. Os dados fornecidos no contato são seguros?</h3><p>Sim, protegidos conforme a LGPD.</p>
-                <h3>14. O PlenoFuturo possui newsletter?</h3><p>Sim, em breve com boletins exclusivos por e-mail.</p>
-                <h3>15. Como apoiar o projeto?</h3><p>Compartilhando nossos artigos com amigos e familiares!</p>
-            `
-        },
-        'contato': {
-            titulo: 'Contato',
-            conteudo: `
-                <p>Tem dúvidas, sugestões ou deseja anunciar conosco? Entre em contato através do e-mail:</p>
-                <p><strong>contato@plenofuturo.com.br</strong></p>
-                <p>Responderemos sua mensagem em até 48 horas úteis.</p>
-            `
-        }
-    };
+    let titulo = '';
+    let conteudo = '';
 
-    const current = pages[page] || { titulo: 'Página não encontrada', conteudo: '<p>A página solicitada não existe.</p>' };
+    if (page === 'quem-somos') {
+        titulo = 'Quem Somos';
+        conteudo = `
+            <p>O <strong>PlenoFuturo</strong> nasceu com um propósito claro: democratizar o conhecimento prático sobre longevidade ativa, planejamento financeiro de longo prazo e reinvenção profissional na maturidade.</p>
+            <p>Acreditamos que a faixa dos 40, 50 anos e além não representa o fim de um ciclo, mas sim o início de uma fase marcada pela sabedoria, autonomia e novas conquistas. Nossa missão é fornecer conteúdos rigorosos, diretos ao ponto e livres de jargões complexos.</p>
+        `;
+    } else if (page === 'privacidade') {
+        titulo = 'Política de Privacidade (LGPD)';
+        conteudo = `
+            <p>A sua privacidade é de extrema importância para nós. O PlenoFuturo segue rigorosamente as diretrizes da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).</p>
+            <h3>Coleta de Dados</h3>
+            <p>Utilizamos cookies estritamente necessários para navegação e cookies analíticos/publicitários de terceiros (como o Google AdSense) mediante o seu consentimento explícito.</p>
+            <h3>Seus Direitos</h3>
+            <p>Você pode a qualquer momento solicitar a exclusão de dados de navegação ou ajustar suas preferências através do nosso banner de cookies.</p>
+        `;
+    } else if (page === 'cookies') {
+        titulo = 'Política de Cookies';
+        conteudo = `
+            <p>Utilizamos cookies para melhorar a sua experiência de navegação, personalizar conteúdos e analisar o tráfego do portal.</p>
+            <h3>Como Gerenciar</h3>
+            <p>Você tem total liberdade para aceitar, recusar ou personalizar o uso de cookies através do painel de preferências exibido no rodapé do site.</p>
+        `;
+    } else if (page === 'termos') {
+        titulo = 'Termos de Uso';
+        conteudo = `
+            <p>Ao acessar o portal <strong>PlenoFuturo</strong>, você concorda expressamente com os termos descritos nesta página.</p>
+            <h3>Propriedade Intelectual</h3>
+            <p>Todo o conteúdo publicado neste portal é protegido por direitos autorais, sendo vedada a reprodução comercial sem autorização prévia.</p>
+        `;
+    } else if (page === 'aviso-legal') {
+        titulo = 'Aviso Legal';
+        conteudo = `
+            <p>As informações fornecidas no portal <strong>PlenoFuturo</strong> possuem caráter estritamente educacional e informativo.</p>
+            <p>Conteúdos sobre finanças e saúde não substituem a consultoria individualizada com profissionais certificados.</p>
+        `;
+    } else if (page === 'faq') {
+        titulo = 'FAQ - Perguntas Frequentes';
+        conteudo = `
+            <h3>1. Os conteúdos do PlenoFuturo são gratuitos?</h3><p>Sim, 100% gratuitos e acessíveis a qualquer momento.</p>
+            <h3>2. Como posso sugerir novos temas?</h3><p>Através da nossa página de contato ou redes sociais oficiais.</p>
+            <h3>3. O site possui anúncios?</h3><p>Sim, exibimos anúncios contextuais para manter a gratuidade.</p>
+            <h3>4. Como alterar minhas preferências de cookies?</h3><p>Basta limpar os dados de navegação ou redefinir as preferências no banner.</p>
+            <h3>5. Preciso me cadastrar para ler os artigos?</h3><p>Não é obrigatório o cadastro para leitura.</p>
+            <h3>6. Posso compartilhar os textos?</h3><p>Sim, desde que citada a fonte original.</p>
+            <h3>7. Os artigos são revisados por especialistas?</h3><p>Sim, seguimos critérios rígidos de curadoria.</p>
+            <h3>8. Como funciona a monetização?</h3><p>Por meio de anúncios de parceiros confiáveis como o Google AdSense.</p>
+            <h3>9. O site é compatível com celulares?</h3><p>Sim, o design é totalmente responsivo.</p>
+            <h3>10. Posso investir com base nos artigos de finanças?</h3><p>Os textos são educacionais; recomenda-se análise de perfil de risco.</p>
+            <h3>11. Como entrar em contato com a redação?</h3><p>Utilize o e-mail indicado na aba Contato.</p>
+            <h3>12. Com que frequência há novos artigos?</h3><p>Publicamos conteúdos novos semanalmente.</p>
+            <h3>13. Os dados fornecidos no contato são seguros?</h3><p>Sim, protegidos conforme a LGPD.</p>
+            <h3>14. O PlenoFuturo possui newsletter?</h3><p>Sim, em breve com boletins exclusivos.</p>
+            <h3>15. Como apoiar o projeto?</h3><p>Compartilhando nossos artigos com amigos e familiares!</p>
+        `;
+    } else if (page === 'contato') {
+        titulo = 'Contato';
+        conteudo = `
+            <p>Tem dúvidas, sugestões ou deseja anunciar conosco? Entre em contato através do e-mail:</p>
+            <p><strong>contato@plenofuturo.com.br</strong></p>
+            <p>Responderemos sua mensagem em até 48 horas úteis.</p>
+        `;
+    } else {
+        titulo = 'Página não encontrada';
+        conteudo = '<p>A página solicitada não existe.</p>';
+    }
+
     root.innerHTML = `
         <div class="content-page">
-            <h2>${current.titulo}</h2>
-            ${current.conteudo}
+            <h2>${titulo}</h2>
+            ${conteudo}
             <hr style="border: 0; border-top: 1px solid var(--border); margin: 30px 0;">
             <a href="#home" class="btn-primary">&larr; Voltar para a Página Inicial</a>
         </div>
