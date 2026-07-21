@@ -19,91 +19,19 @@
         "url": "https://pablosilvs.github.io/PlenoFuturo/"
     }
     </script>
-
-    <style>
-        /* Estilos adicionais para o rodapé institucional e páginas legais */
-        .main-footer {
-            background-color: var(--footer-bg, #0f172a);
-            color: #cbd5e1;
-            padding: 50px 0 20px;
-            margin-top: 60px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        .footer-col h3 {
-            color: #ffffff;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-        .footer-col h4 {
-            color: #ffffff;
-            font-size: 1rem;
-            margin-bottom: 12px;
-        }
-        .footer-col p {
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-        .footer-col ul {
-            list-style: none;
-            padding: 0;
-        }
-        .footer-col ul li {
-            margin-bottom: 8px;
-        }
-        .footer-col ul li a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .footer-col ul li a:hover {
-            color: #38bdf8;
-            text-decoration: underline;
-        }
-        .footer-bottom {
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 20px;
-            font-size: 0.85rem;
-            color: #64748b;
-        }
-        .institutional-page {
-            background: var(--card-bg, #1e293b);
-            padding: 40px;
-            border-radius: 12px;
-            margin: 30px 0;
-            line-height: 1.7;
-            color: #e2e8f0;
-        }
-        .institutional-page h2 {
-            color: #38bdf8;
-            margin-bottom: 20px;
-        }
-        .institutional-page h3 {
-            margin-top: 20px;
-            color: #f8fafc;
-        }
-        .institutional-page p, .institutional-page li {
-            margin-bottom: 12px;
-            font-size: 1rem;
-        }
-    </style>
 </head>
 <body>
     <header class="main-header">
         <div class="container header-flex">
             <div class="logo">
-                <a href="#" onclick="router('home')">Pleno<span>Futuro</span></a>
+                <a href="index.html">Pleno<span>Futuro</span></a>
             </div>
             <nav class="main-nav">
-                <ul id="menu-categorias">
-                    <!-- Categorias renderizadas via JS -->
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#financas">Finanças</a></li>
+                    <li><a href="#saude">Saúde e Bem-estar</a></li>
+                    <li><a href="#carreira">Carreira 40+</a></li>
                 </ul>
             </nav>
             <button id="theme-toggle" class="btn-theme">🌓 Tema</button>
@@ -111,48 +39,81 @@
     </header>
 
     <!-- AdSense Placeholder Topo -->
-    <div class="container adsense-placeholder">
+    <div class="container adsense-placeholder" style="text-align:center; padding: 20px; background: rgba(255,255,255,0.03); margin: 20px auto; border-radius: 8px; color: #64748b;">
         <p>Espaço Publicitário (AdSense 728x90)</p>
     </div>
 
-    <main id="app-root" class="container">
-        <!-- O conteúdo principal (Artigos / Páginas Institucionais) será injetado aqui via JavaScript -->
+    <main class="container">
+        <section class="hero-section" style="padding: 40px 0; text-align: center;">
+            <h1 style="font-size: 2.2rem; margin-bottom: 15px; color: #f8fafc;">Viva a melhor fase da sua vida com autonomia</h1>
+            <p style="color: #94a3b8; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Conteúdos práticos sobre finanças, saúde integrativa e transição de carreira para uma longevidade ativa.</p>
+        </section>
+
+        <h2 style="margin: 30px 0 20px; color: #f8fafc; font-size: 1.5rem;">Últimos Artigos</h2>
+
+        <div class="articles-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px;">
+            
+            <!-- Artigo 1 -->
+            <article class="card" style="background: var(--card-bg, #1e293b); padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                <span style="color: #38bdf8; font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">Finanças</span>
+                <h3 style="color: #f8fafc; font-size: 1.25rem; margin: 10px 0;">Regra dos 50-30-20: Como Organizar o Orçamento Familiar na Maturidade</h3>
+                <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px;">Aprenda a aplicar a regra orçamentária 50-30-20 para equilibrar gastos essenciais, estilo de vida e investimentos focados na aposentadoria.</p>
+                <a href="#" style="color: #38bdf8; text-decoration: none; font-weight: 600;">Ler artigo completo &rarr;</a>
+            </article>
+
+            <!-- Artigo 2 -->
+            <article class="card" style="background: var(--card-bg, #1e293b); padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                <span style="color: #38bdf8; font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">Carreira</span>
+                <h3 style="color: #f8fafc; font-size: 1.25rem; margin: 10px 0;">Como Fazer uma Transição de Carreira aos 45 Anos com Segurança Financeira</h3>
+                <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px;">Planeje sua mudança de profissão após os 40 anos sem comprometer seu orçamento. Guia passo a passo sobre requalificação e networking.</p>
+                <a href="#" style="color: #38bdf8; text-decoration: none; font-weight: 600;">Ler artigo completo &rarr;</a>
+            </article>
+
+            <!-- Artigo 3 -->
+            <article class="card" style="background: var(--card-bg, #1e293b); padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                <span style="color: #38bdf8; font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">Saúde</span>
+                <h3 style="color: #f8fafc; font-size: 1.25rem; margin: 10px 0;">Melhores Suplementos para Memória e Foco Comprovados pela Ciência</h3>
+                <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px;">Descubra quais suplementos alimentares realmente ajudam no foco e clareza mental para adultos acima dos 40 anos segundo estudos científicos.</p>
+                <a href="#" style="color: #38bdf8; text-decoration: none; font-weight: 600;">Ler artigo completo &rarr;</a>
+            </article>
+
+        </div>
     </main>
 
     <!-- Rodapé Institucional Exigido pelo Google AdSense -->
-    <footer class="main-footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h3>PlenoFuturo</h3>
-                <p>Seu portal definitivo de longevidade ativa, finanças e transição de carreira para viver a melhor fase da vida com liberdade e segurança.</p>
+    <footer style="background-color: #0f172a; color: #cbd5e1; padding: 50px 0 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <div>
+                <h3 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 15px;">PlenoFuturo</h3>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: #94a3b8;">Seu portal definitivo de longevidade ativa, finanças e transição de carreira para viver a melhor fase da vida com liberdade e segurança.</p>
             </div>
-            <div class="footer-col">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="#" onclick="router('home')">Início</a></li>
-                    <li><a href="#" onclick="router('financas')">Finanças</a></li>
-                    <li><a href="#" onclick="router('saude')">Saúde e Bem-estar</a></li>
-                    <li><a href="#" onclick="router('carreira')">Carreira 40+</a></li>
+            <div>
+                <h4 style="color: #ffffff; font-size: 1rem; margin-bottom: 12px;">Navegação</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px;"><a href="index.html" style="color: #94a3b8; text-decoration: none;">Início</a></li>
+                    <li style="margin-bottom: 8px;"><a href="#financas" style="color: #94a3b8; text-decoration: none;">Finanças</a></li>
+                    <li style="margin-bottom: 8px;"><a href="#saude" style="color: #94a3b8; text-decoration: none;">Saúde e Bem-estar</a></li>
+                    <li style="margin-bottom: 8px;"><a href="#carreira" style="color: #94a3b8; text-decoration: none;">Carreira 40+</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Institucional</h4>
-                <ul>
-                    <li><a href="#" onclick="router('quem-somos')">Quem Somos</a></li>
-                    <li><a href="#" onclick="router('faq')">FAQ (Perguntas Frequentes)</a></li>
-                    <li><a href="#" onclick="router('links-uteis')">Links Úteis</a></li>
+            <div>
+                <h4 style="color: #ffffff; font-size: 1rem; margin-bottom: 12px;">Institucional</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px;"><a href="quem-somos.html" style="color: #94a3b8; text-decoration: none;">Quem Somos</a></li>
+                    <li style="margin-bottom: 8px;"><a href="faq.html" style="color: #94a3b8; text-decoration: none;">FAQ (Perguntas Frequentes)</a></li>
+                    <li style="margin-bottom: 8px;"><a href="links-uteis.html" style="color: #94a3b8; text-decoration: none;">Links Úteis</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Legal & Privacidade</h4>
-                <ul>
-                    <li><a href="#" onclick="router('privacidade')">Política de Privacidade</a></li>
-                    <li><a href="#" onclick="router('cookies')">Política de Cookies</a></li>
+            <div>
+                <h4 style="color: #ffffff; font-size: 1rem; margin-bottom: 12px;">Legal & Privacidade</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px;"><a href="privacidade.html" style="color: #94a3b8; text-decoration: none;">Política de Privacidade</a></li>
+                    <li style="margin-bottom: 8px;"><a href="cookies.html" style="color: #94a3b8; text-decoration: none;">Política de Cookies</a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom container">
-            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados. Desenvolvido para uma longevidade ativa.</p>
+        <div class="container" style="text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 20px; font-size: 0.85rem; color: #64748b;">
+            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados.</p>
         </div>
     </footer>
 
