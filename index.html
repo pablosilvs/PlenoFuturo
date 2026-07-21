@@ -3,20 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlenoFuturo - Longevidade e Finanças</title>
-    <meta name="description" content="Saúde, finanças e carreira para uma longevidade ativa.">
+    <title>PlenoFuturo - Longevidade, Finanças e Carreira</title>
+    <meta name="description" content="Saúde, finanças e carreira para uma longevidade ativa e independente após os 40 anos.">
+    <meta name="google-site-verification" content="GToHrRUaEuteOM6ISlBmo5hk2K4Las-SJWhgsz_SHk" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="manifest.json">
-   <meta name="google-site-verification" content="GToHrRUaEuteOM6ISlBmo5hk2LK4Las-SJWHgsz_SHk" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    
     <!-- Schema.org Básico -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "PlenoFuturo",
-      "url": "https://plenofuturo.com.br"
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PlenoFuturo",
+        "url": "https://pablosilvs.github.io/PlenoFuturo/"
     }
     </script>
+
+    <style>
+        /* Estilos adicionais para o rodapé institucional e páginas legais */
+        .main-footer {
+            background-color: var(--footer-bg, #0f172a);
+            color: #cbd5e1;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .footer-col h3 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        .footer-col h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        .footer-col ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-col ul li a:hover {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        .institutional-page {
+            background: var(--card-bg, #1e293b);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 30px 0;
+            line-height: 1.7;
+            color: #e2e8f0;
+        }
+        .institutional-page h2 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+        .institutional-page h3 {
+            margin-top: 20px;
+            color: #f8fafc;
+        }
+        .institutional-page p, .institutional-page li {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
@@ -39,32 +116,43 @@
     </div>
 
     <main id="app-root" class="container">
-        <!-- O conteúdo será injetado aqui via JavaScript (SPA) -->
+        <!-- O conteúdo principal (Artigos / Páginas Institucionais) será injetado aqui via JavaScript -->
     </main>
 
-    <!-- AdSense Placeholder Rodapé -->
-    <div class="container adsense-placeholder">
-        <p>Espaço Publicitário (AdSense Responsivo)</p>
-    </div>
-
+    <!-- Rodapé Institucional Exigido pelo Google AdSense -->
     <footer class="main-footer">
         <div class="container footer-grid">
-            <div>
+            <div class="footer-col">
                 <h3>PlenoFuturo</h3>
-                <p>Construindo a melhor fase da sua vida com conhecimento e estratégia.</p>
+                <p>Seu portal definitivo de longevidade ativa, finanças e transição de carreira para viver a melhor fase da vida com liberdade e segurança.</p>
             </div>
-            <div>
-                <h4>Links Úteis</h4>
+            <div class="footer-col">
+                <h4>Navegação</h4>
                 <ul>
-                    <li><a href="#" onclick="router('sobre')">Sobre Nós</a></li>
-                    <li><a href="#" onclick="router('contato')">Contato</a></li>
+                    <li><a href="#" onclick="router('home')">Início</a></li>
+                    <li><a href="#" onclick="router('financas')">Finanças</a></li>
+                    <li><a href="#" onclick="router('saude')">Saúde e Bem-estar</a></li>
+                    <li><a href="#" onclick="router('carreira')">Carreira 40+</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="#" onclick="router('quem-somos')">Quem Somos</a></li>
+                    <li><a href="#" onclick="router('faq')">FAQ (Perguntas Frequentes)</a></li>
+                    <li><a href="#" onclick="router('links-uteis')">Links Úteis</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Privacidade</h4>
+                <ul>
                     <li><a href="#" onclick="router('privacidade')">Política de Privacidade</a></li>
+                    <li><a href="#" onclick="router('cookies')">Política de Cookies</a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados.</p>
-            <a href="admin.html" class="admin-link">Painel Admin</a>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 PlenoFuturo. Todos os direitos reservados. Desenvolvido para uma longevidade ativa.</p>
         </div>
     </footer>
 
